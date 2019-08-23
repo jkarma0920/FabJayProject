@@ -1,6 +1,6 @@
 # A Multiple Variable Regression Model to predict public high schools graduation rates in NYC (2014) based on NYC Open Data
-# August 2019
 Contributors: Jay KIM and Fabrice MESIDOR
+August 2019
 
 ## Objective:
 Identify factors that can predict NYC public high school graduation rates.
@@ -12,7 +12,7 @@ Identify factors that can predict NYC public high school graduation rates.
 ## Hypothesis:
 The high rate of graduation in a school is not dependent of any factors related to the school or the students.
 
-Datasets and Variables:
+## Datasets and Variables:
 ## Sources
  * Data extracted from NYC Open Data (https://opendata.cityofnewyork.us/) in csv format, cleaned and treated using python (pandas)
  * Disclaimer: NYC Open Data format has inconsistencies (i.e., results are only as good as its source data)
