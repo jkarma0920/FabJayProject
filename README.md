@@ -1,4 +1,4 @@
-# A Multiple Variable Regression Model to predict public high schools graduation rates in NYC (2014) based on NYC Open Data
+# A Multiple Variable Regression Model: Predicting public high school graduation rates in NYC (2014) based on NYC Open Data
 Contributors: Fabrice Mesidor and Jay Kim
 
 August 2019
