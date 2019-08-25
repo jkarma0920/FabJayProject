@@ -1,5 +1,6 @@
 # A Multiple Variable Regression Model to predict public high schools graduation rates in NYC (2014) based on NYC Open Data
 Contributors: Fabrice Mesidor and Jay Kim
+
 August 2019
 
 ## Objective:
@@ -19,15 +20,15 @@ The high rate of graduation in a school is not dependent on a discernible set of
 ## Datasets:
 For the 2014-2015 School Year:
 1) Graduation Rates (by individual schools), with tables for:
- * All students
- * by ELL (English Language Learner) classification
- * by SWD (Student with Disabilities) classification
- * by Ethnicity
- * by Gender
- * by Poverty classification
+   * All students
+   * by ELL (English Language Learner) classification
+   * by SWD (Student with Disabilities) classification
+   * by Ethnicity
+   * by Gender
+   * by Poverty classification
 2) High School Quality Report, with tables for:
- * Summary of Results
- * Student Achievement Breakdown
+   * Summary of Results
+   * Student Achievement Breakdown
 
 ## Data
  * 420 observations - each observation represents a school.
