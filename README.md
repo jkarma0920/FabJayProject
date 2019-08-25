@@ -46,12 +46,11 @@ For the 2014-2015 School Year:
  * Distribution approximates a normal distribution after change
  * It also helped to remove data that would create biases in our models
 
-## Empirical Approach (Out of a Suite of 39 Variables)
+## Pinpoint correlations down to 39 Variables
  * Relationship between target variable and potential explanatory variables
  * 2 main variables have noticeably high correlation rates: Student Achievement Scores and Student Attendance Rate
 ![Two High-Correlation Examples](Images/BestTwoExamples.jpg "Two High Correlations")
 
-## Empirical Approach (Out of a Suite of 39 Variables)
 Coorelation Matrix with all variables (checking for multicollinearity)
 ![Correlation Matrix](/Images/MultiCollinearity.jpg "Multicollinearity Check")
  * Since this is a Pearson Coefficient, the values near to 1 or -1 have high correlation. 
@@ -60,18 +59,21 @@ Coorelation Matrix with all variables (checking for multicollinearity)
 
 ## Modelisation & Validation
 ![FlowChart](/Images/TableFlowChart.jpg "Modelisation and Validation")
-Steps taken before selecting our final model:
+
+ * Merged Tables
  * Added Variables
  * Modeling with transformation
  * Checking errors normality and heteroscedasticity
+
 
 ## Final Model
 Grad_rate = 0.8649 + 0.2975 (prob Former English Language Learner) + 0.5254 (prob Not English Lanuage Learner) + 0.0086 (Student Achievement Score) + 0.018 (% Earning 10 Credits in Year 1) + 0.2235 (Supportive Environment - % Positive) + 0.0469 (Avg Grade 8 English Proficiency) + 0.4109 (% English Lanuage Learners) - 0.3683 (% in Temp Housing) + 0.6355 (Student Attendance Rate) + 0.2678 (Teacher Attendance Rate)
 ![Focusing on 50% or Greater GradRate improves homoscedasticity](/Images/LinearRegressionAssumptions.jpg "Assumptions")
 
-## Conclusions
+
 ![OLS Summary Table](/Images/OLS_Results.jpg "OrdinaryLeastSquares")
- * NYC Public High School graduation rates can be explained mainly by factors relevant to the school environment and attendance.
+## Conclusions
+* NYC Public High School graduation rates can be explained mainly by factors relevant to the school environment and attendance.
  * Gender and ethnicity don’t impact graduation rates in any of our models.
  * More analysis are required to find out why male/female population and other demographic attributes are not statistically significant
 
