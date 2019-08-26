@@ -1,5 +1,6 @@
-# A Multiple Variable Regression Model to predict public high schools graduation rates in NYC (2014) based on NYC Open Data
-Contributors: Jay KIM and Fabrice MESIDOR
+# A Multiple Variable Regression Model: Predicting public high school graduation rates in NYC (2014) based on NYC Open Data
+Contributors: Fabrice Mesidor and Jay Kim
+
 August 2019
 
 ## Objective:
@@ -17,17 +18,17 @@ The high rate of graduation in a school is not dependent on a discernible set of
  * Disclaimer: NYC Open Data format has inconsistencies (i.e., results are only as good as its source data)
 
 ## Datasets:
- For the 2014-2015 School Year:
- 1) Graduation Rates (by individual schools), with tables for:
- * All students
- * by ELL (English Language Learner) classification
- * by SWD (Student with Disabilities) classification
- * by Ethnicity
- * by Gender
- * by Poverty classification
- 2) High School Quality Report, with tables for:
- * Summary of Results
- * Student Achievement Breakdown
+For the 2014-2015 School Year:
+1) Graduation Rates (by individual schools), with tables for:
+   * All students
+   * by ELL (English Language Learner) classification
+   * by SWD (Student with Disabilities) classification
+   * by Ethnicity
+   * by Gender
+   * by Poverty classification
+2) High School Quality Report, with tables for:
+   * Summary of Results
+   * Student Achievement Breakdown
 
 ## Data
  * 420 observations - each observation represents a school.
@@ -36,6 +37,7 @@ The high rate of graduation in a school is not dependent on a discernible set of
  * High school graduation rate (% - continuous)
 
 ## Independent variables (40 after filtering)
+![Combinations of Variables](/Images/PairPlots.jpg "QuickView of Pairplots")
  * Examples of categories: ethnicity - language proficiency - gender - SAT - achievement scores
 
 ## Empirical Approach
@@ -45,9 +47,33 @@ The high rate of graduation in a school is not dependent on a discernible set of
  * Distribution approximates a normal distribution after change
  * It also helped to remove data that would create biases in our models
 
-## Empirical Approach (Out of a Suite of 39 Variables)
+## Pinpoint correlations down to 39 Variables
  * Relationship between target variable and potential explanatory variables
  * 2 main variables have noticeably high correlation rates: Student Achievement Scores and Student Attendance Rate
+![Two High-Correlation Examples](Images/BestTwoExamples.jpg "Two High Correlations")
+
+Coorelation Matrix with all variables (checking for multicollinearity)
+![Correlation Matrix](/Images/MultiCollinearity.jpg "Multicollinearity Check")
+ * Since this is a Pearson Coefficient, the values near to 1 or -1 have high correlation. 
+ * We drop “ethnicity probabilities” and all but one “metric score,” and then
+ * We start to execute our linear regression model with the non-correlated variables.
+
+## Modelisation & Validation
+![FlowChart](/Images/TableFlowChart.jpg "Modelisation and Validation")
+
+ * Merged Tables
+ * Added Variables
+ * Modeling with transformation
+ * Checking errors normality and heteroscedasticity
 
 
+## Final Model
+Grad_rate = 0.8649 + 0.2975 (prob Former English Language Learner) + 0.5254 (prob Not English Lanuage Learner) + 0.0086 (Student Achievement Score) + 0.018 (% Earning 10 Credits in Year 1) + 0.2235 (Supportive Environment - % Positive) + 0.0469 (Avg Grade 8 English Proficiency) + 0.4109 (% English Lanuage Learners) - 0.3683 (% in Temp Housing) + 0.6355 (Student Attendance Rate) + 0.2678 (Teacher Attendance Rate)
+![Focusing on 50% or Greater GradRate improves homoscedasticity](/Images/LinearRegressionAssumptions.jpg "Assumptions")
 
+
+![OLS Summary Table](/Images/OLS_Results.jpg "OrdinaryLeastSquares")
+## Conclusions
+* NYC Public High School graduation rates can be explained mainly by factors relevant to the school environment and attendance.
+ * Gender and ethnicity don’t impact graduation rates in any of our models.
+ * More analysis are required to find out why male/female population and other demographic attributes are not statistically significant
