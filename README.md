@@ -66,7 +66,6 @@ Coorelation Matrix with all variables (checking for multicollinearity)
  * Modeling with transformation
  * Checking errors normality and heteroscedasticity
 
-
 ## Final Model
 Grad_rate = 0.8649 + 0.2975 (prob Former English Language Learner) + 0.5254 (prob Not English Lanuage Learner) + 0.0086 (Student Achievement Score) + 0.018 (% Earning 10 Credits in Year 1) + 0.2235 (Supportive Environment - % Positive) + 0.0469 (Avg Grade 8 English Proficiency) + 0.4109 (% English Lanuage Learners) - 0.3683 (% in Temp Housing) + 0.6355 (Student Attendance Rate) + 0.2678 (Teacher Attendance Rate)
 ![Focusing on 50% or Greater GradRate improves homoscedasticity](/Images/LinearRegressionAssumptions.jpg "Assumptions")
