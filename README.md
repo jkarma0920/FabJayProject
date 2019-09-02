@@ -58,7 +58,7 @@ Coorelation Matrix with all variables (checking for multicollinearity)
  * We drop “ethnicity probabilities” and all but one “metric score,” and then
  * We start to execute our linear regression model with the non-correlated variables.
 
-## Modelisation & Validation
+## Modelization & Validation
 ![FlowChart](/Images/TableFlowChart.jpg "Modelisation and Validation")
 
  * Merged Tables
